@@ -1,7 +1,6 @@
 package work.socialhub.kmisskey
 
 import work.socialhub.kmisskey.api.*
-import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport
 
 @JsExport
@@ -32,6 +31,7 @@ interface Misskey {
     fun hashtags(): HashtagsResource
     fun other(): OtherResource
     fun webhook(): WebhooksResource
+    fun registry(): RegistryResource
     fun gallery(): GalleriesResource
 
     /**

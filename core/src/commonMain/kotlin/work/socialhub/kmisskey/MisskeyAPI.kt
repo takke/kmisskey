@@ -225,6 +225,16 @@ enum class MisskeyAPI(
     IWebhooksCreate("i/webhooks/create"),
 
     // ------------------------------------------ //
+    // Registry
+    // ------------------------------------------ //
+
+    IRegistryGet("i/registry/get"),
+    IRegistryGetAll("i/registry/get-all"),
+    IRegistryKeys("i/registry/keys"),
+    IRegistrySet("i/registry/set"),
+    IRegistryScopesWithDomain("i/registry/scopes-with-domain"),
+
+    // ------------------------------------------ //
     // Gallery
     // ------------------------------------------ //
 

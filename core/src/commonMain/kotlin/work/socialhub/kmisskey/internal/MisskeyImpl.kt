@@ -23,6 +23,7 @@ import work.socialhub.kmisskey.api.NotesResource
 import work.socialhub.kmisskey.api.OtherResource
 import work.socialhub.kmisskey.api.PollsResource
 import work.socialhub.kmisskey.api.ReactionsResource
+import work.socialhub.kmisskey.api.RegistryResource
 import work.socialhub.kmisskey.api.UsersResource
 import work.socialhub.kmisskey.api.WebhooksResource
 import work.socialhub.kmisskey.internal.api.AccountsResourceImpl
@@ -48,6 +49,7 @@ import work.socialhub.kmisskey.internal.api.NotesResourceImpl
 import work.socialhub.kmisskey.internal.api.OtherResourceImpl
 import work.socialhub.kmisskey.internal.api.PollsResourceImpl
 import work.socialhub.kmisskey.internal.api.ReactionsResourceImpl
+import work.socialhub.kmisskey.internal.api.RegistryResourceImpl
 import work.socialhub.kmisskey.internal.api.UsersResourceImpl
 import work.socialhub.kmisskey.internal.api.WebhooksResourceImpl
 
@@ -83,6 +85,7 @@ class MisskeyImpl(
     private val files: FilesResource = FilesResourceImpl(host, i)
     private val hashtags: HashtagsResource = HashtagsResourceImpl(host, i)
     private val webhooks: WebhooksResource = WebhooksResourceImpl(host, i)
+    private val registry: RegistryResource = RegistryResourceImpl(host, i)
     private val galleries: GalleriesResource = GalleriesResourceImpl(host, i)
     private val other: OtherResource = OtherResourceImpl(host, i)
 
@@ -111,5 +114,6 @@ class MisskeyImpl(
     override fun hashtags() = hashtags
     override fun other() = other
     override fun webhook() = webhooks
+    override fun registry() = registry
     override fun gallery() = galleries
 }
